@@ -36,6 +36,21 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="flex flex-col w-dvw items-center">
+      {slug === "personal-encyclopedias" && (
+        <a
+          href="https://news.ycombinator.com/item?id=47522173"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full justify-center bg-neutral-100 py-2 text-left font-sans text-sm text-neutral-700 hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-black dark:bg-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-600 dark:focus-visible:outline-white"
+        >
+          <span className="flex w-full max-w-2xl flex-col items-start gap-1 px-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+            <span>Read discussion on Hacker News</span>
+            <span className="whitespace-nowrap text-neutral-500 dark:text-neutral-300">
+              897 points, 185 comments
+            </span>
+          </span>
+        </a>
+      )}
       <div className="max-w-2xl w-full flex flex-col gap-8 py-18 px-6">
         <div className="flex flex-col gap-1">
           <h1 className="font-sans font-normal text-2xl">{post.title}</h1>
